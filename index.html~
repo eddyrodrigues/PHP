@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" media "print" href="stylesheet.css"/>
+include_once(noticieis.php);
+
+</head>
+<body>
+
+
+
+<div class="header">
+<span class="topo"><img src="flor_topo.png" alt="Flower"></span>
+  <p>sistema central</p>
+</div>
+<div class="menu">
+	<ul>
+		<li> <a href="index.html">home</a> </li>
+		<li> <a href="#">about</a> </li>
+		<li><a href="#">portifolio</a></li>
+	</ul>
+</div>
+<div class="corpo_de_fundo">
+	<div class="barra_esquerda">
+		<table>
+			<tr>
+				<th><h1>Menu Principal</h1></th>
+			</tr>
+			<tr>
+				<td>	
+					<ul>
+						<li> <a href="index.html">home</a> </li>
+						<li> <a href="#">about</a> </li>
+						<li> <a href="#">portifolio</a></li>
+					</ul>					
+				</td>
+			</tr>
+			<tr>
+				<th style = "border:1px solid;"><h1>aaaaaaaasadokasd</h1></th>
+			</tr>			
+		</table>
+	</div>
+	<div class="barra_direita">
+	<table>
+			<tr>
+				<th><h1>Noticias</h1></th>
+			<tr>
+			</tr>
+				<td>	<p></p> </td>
+			</tr>
+			<tr>
+				<th style = "border:1px solid;"><h1>aaaaaaaasadokasd</h1></th>
+			</tr>			
+		</table>
+	</div>
+</div>
+</body>
+</html>
+
