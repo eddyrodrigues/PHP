@@ -43,6 +43,10 @@ class CRUD{
 		}
 		return $result; //retorna true(1) ou false(0)
 	}
+	public function create($table){
+		//pass
+	}
+	
 }
 
 
