@@ -2,8 +2,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+<script src="jas.js"></script>
 </head>
 <body>
+<!-- <script>window.alert("Seja bem vindo!")</script> -->
 <?php
 if(isset($_REQUEST['id'])){
 		$id = $_REQUEST['id']; // Aqui esta difinido o request //
@@ -30,14 +32,14 @@ if(isset($_REQUEST['id'])){
 				case "admin":
 					$pagina = "administrador/admin.php";
 					break;
-				case "rank":
-					$pagina = "rank.php";
+				case "add_notice":
+					$pagina = "add_notice.php";
 					break;
 
 			}
 		}
 }else {
-	header("Location: index.php?id=noticias");
+	header("Location: index.php?id=index");
 }
 ?>
 
@@ -64,6 +66,9 @@ if(isset($_REQUEST['id'])){
 						<li> <a href="index.php">home</a> </li>
 						<li> <a href="?id=rank">Rank</a> </li>
 						<li> <a href="?id=serverinfo">ServerInfo</a></li>
+
+						</script>
+						<li><button type="button" onclick="bt_hid()">Click Me!</button></li>
 					</ul>
 				</td>
 			</tr>
@@ -72,7 +77,7 @@ if(isset($_REQUEST['id'])){
 			</tr>
 		</table>
 	</div>
-	<div class="barra_direita">
+	<div class="barra_direita"  id="barra_direita_texto">
 	<?php
 		if( (isset($pagina)) and (file_exists($pagina)) ) {  //a aqui se a pagina nao existir //
 			include($pagina);
@@ -83,5 +88,6 @@ if(isset($_REQUEST['id'])){
 	</div>
 </div>
 <footer class="menu"><a href="?id=admin">administrador</a></footer>
+
 </body>
 </html>
