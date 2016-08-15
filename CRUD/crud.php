@@ -5,10 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CRUD</title>
 </head>
+<body>
 <?php
 
 
-class CRUD{
+class CRUD{ //C.R.U.D = [C]reate, [R]ead, [U]pdate and [D]elete
 	private $host = '127.0.0.1';
 	private $port = 3306;
 	private $user = 'root';
@@ -49,19 +50,23 @@ class CRUD{
 	}
 	
 }
-
-
-
 $conexao = new CRUD('dudu', 'root');
-$select = $conexao->select('pessoas',5);
-foreach ( $select as $row ){
-	//print_r($row['nome']);
-	print_r('<br>Nome: ' .$row['nome']. '<br>Cidade:'. $row['cidade']);  	
-	echo "<br>";
+$select = $conexao->select('pessoas'); //Pega array com todos os usuários da tabela pessoas
+echo "<table width='200' border='1'>";
+
+foreach ( $select as $row ){ //adicionado a apresentação de tabela
+	
+	echo "<tr><th>Nome</th><td><center>".$row['nome']."</center></td></tr>";
+	echo "<tr><th>Cidade</th><td><center>".$row['cidade']."</center></td></tr>"; 
+	
+	#print_r($row['nome']);
+	#print_r('<br>Nome: ' .$row['nome']. '<br>Cidade:'. $row['cidade']);  	
+	#echo "<br>";
 }
-print_r ($conexao->delete('pessoas'));
+
+echo "</table>";
+//print_r ($conexao->delete('pessoas'));
 
 ?>
-<body>
 </body>
 </html>
