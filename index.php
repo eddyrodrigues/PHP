@@ -2,7 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
-<script src="jas.js"></script>
+
+<script src="Jquery.js"></script>
+<script src="jas.js">$('.menu').click(function(){alert('asjdiajsd');});</script>
 </head>
 <body>
 <!-- <script>window.alert("Seja bem vindo!")</script> -->
@@ -47,13 +49,24 @@ if(isset($_REQUEST['id'])){
 <span class="topo"></span>
   <p>sistema central</p>
 </div>
-<div class="menu">
-	<ul>
-		<li> <a href="index.html">Home</a> </li>
-		<li> <a href="#">about</a> </li>
+
+	<ul id="menu">
+		<li> <a href="#" onMouseOver="abremenu()">Home</a> 
+        	<ul>
+        		<li>novo</li>
+            	<li>novo2</li>
+        	</ul>
+        </li>
+		<li> <a href="#" onMouseOver="abremenu()">about</a> 
+        	<ul>
+        		<li>novo</li>
+            	<li>novo2</li>
+            </ul>
+        </li>
+        	
 		<li><a href="#">ServerInfo</a></li>
 	</ul>
-</div>
+
 <div class="corpo_de_fundo">
 	<div class="barra_esquerda">
 		<table>
@@ -64,11 +77,11 @@ if(isset($_REQUEST['id'])){
 				<td>
 					<ul>
 						<li> <a href="index.php">home</a> </li>
-						<li> <a href="?id=rank">Rank</a> </li>
+						<li> <a href="#dudu">Rank</a> </li>
 						<li> <a href="?id=serverinfo">ServerInfo</a></li>
 
-						</script>
-						<li><button type="button" onclick="bt_hid()">Click Me!</button></li>
+						
+						<li><button type="button" onClick="bt_hid()">Desconder tudo a direita ></</button></li>
 					</ul>
 				</td>
 			</tr>
@@ -87,7 +100,7 @@ if(isset($_REQUEST['id'])){
 	?>
 	</div>
 </div>
-<footer class="menu"><a href="?id=admin">administrador</a></footer>
+<footer class="menu"><a name="administracao" href="?id=admin">administrador</a><p><h1 id="dudu">nome</h1></footer>
 
 </body>
 </html>

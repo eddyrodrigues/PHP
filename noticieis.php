@@ -1,10 +1,8 @@
 
 
-
+<script src="Jquery.js"></script>
 <table>
-			<tr>
-				<th><h1>Noticias</h1></th>
-			</tr>
+			
 			<tr>
 				<td><table>
 						<?php
@@ -22,8 +20,9 @@
 						$query = "select titulo,autor,notice from noticias";
 						
 						foreach ($dbh->query($query) as $row) {
-							echo "<tr><th><h1>-> ".$row["titulo"]."</h1></th></tr>";
-							echo "<tr><td><p>". $row["notice"] . "</p></td></tr>";
+							echo "<tr><th><h1 onClick='' >-> ".$row["titulo"]."</h1></th></tr>";
+							
+							echo "<tr  id = 'noticia_' ><td><p >". $row["notice"] . "</p></td></tr>";
 
 						}
 						if($dbh->query($query) == false) {

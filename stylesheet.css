@@ -179,32 +179,27 @@ table {
   height: 130px;
 }
 
-.menu > ul > li {
+
+#menu {
+	background-color : #696969;
 	text-align:  center;
 	color: black;
-	display: inline-block ;
-}
-.menu > ul > li:hover {
-	text-align:  center;
-	color: red;
-	display: inline-block ;
-}
-
-.menu {
-	font-family: Arial;
-	color: auto;
-	text-align: center;
-	word-spacing: 10px;
+	word-spacing:10px;
+	list-style-position:outside;
 	border-bottom: 1px solid  #696969;
 
 }
-.menu ul {
-	background-image: url("menu_fundo.jpeg");
-	background-repeat: repeat-x;
 
+#menu li{
+	display:inline;	
 }
 
-.menu  a {
+#menu li ul{
+
+	background-color:#666;
+	color: #333;
+}
+#menu  a {
 	font-family: monospace;
 	font-size: larger;
 	color: black;
@@ -214,7 +209,7 @@ table {
 
 }
 
-.menu  a:hover {
+#menu  a:hover {
 	color: black;
 	padding-top: 20%;
 	line-height: 20px;
