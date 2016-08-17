@@ -53,12 +53,12 @@ table {
 
 #mensagem {
 	background-color:#099;
-	color:#F00;
+	color:black;
 	box-shadow: 0 0 4px #000;
 	height:50px;
 	text-align:center;
 	padding-top:1%;
-	text-shadow: 0px 0px 1px #F00;
+	/*text-shadow: 0px 0px 2px black;*/
 	font-size:16px;
 	font-family:"Lucida Console", Monaco, monospace;
 	display:none;
@@ -76,6 +76,108 @@ table {
 	margin-top: -100px;
 	margin-left: -200px;
 }
+/*    Configurações de dentro do site, pagina administrativa  */
 
+.content{
+	background-color: #00cc88 ;
+	box-shadow: 0 0 6px #264d00;
+	width:800px;
+	left:50%;
+	position:absolute;
+	margin-left:-400px;
+	height:auto;
+	min-height: 500px;
+	margin-top:210px;
+}
 
+.content p {
+	margin: 5px 5px 5px 15px;
 
+}
+
+#noticia_titulo {
+	text-align: center;
+	font-family: monospace;
+
+	font-size: 14px;
+	color: black;
+	text-shadow: 0 0 1px black;
+	height: 37px;
+	background-position: center;
+	background-image: url("imagens/cima_not.gif");
+	background-repeat: no-repeat;
+}
+
+#noticia_baixo {
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image:url("imagens/not_baixo.png");
+	background-position: center;
+	margin-left: -1px;
+}
+
+.menu{
+	background-image: url("fundo_barra_menu_no_press.png");
+	background-repeat: repeat-x;
+	box-shadow: 0 0 4px #003333;
+	height:40px;
+	position:fixed;
+	margin:0px;
+	width:100%;	
+}
+
+#noticia_content {
+	font-family: sans;
+	background-image: url("imagens/corpo_not.png");
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+#noticia_content p{
+	margin-left: 60px;
+	margin-right: 60px; 
+}
+
+/*
+.menu a{
+	height: 40px;
+	line-height: 40px;
+	color: black;
+	text-decoration: none;
+}*/
+.menu a, a:visited {
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ 
+}
+
+.menu a:hover{
+ 	color: white;
+ 	text-shadow: 0 0 2px white;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+}
+.menu ul{
+	text-align: center;
+}
+.menu ul li{
+	display: inline;
+}
+
+.cabecalho{
+	background-color: #00b377;
+	background-image: url("cabecalho_foto.png");
+	
+	height: 150px;
+	width: 800px;
+	box-shadow: 0 0 6px #264d00;
+	margin-top: 50px;
+	left:50%;
+	margin-left: -400px;
+	position: absolute;
+
+}

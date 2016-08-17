@@ -1,3 +1,12 @@
+
+<?php session_start();
+if( (isset ($_SESSION['usuario']) == true) and (isset ($_SESSION['senha']) == true) )
+{
+	header("location: site.php");
+
+}
+ ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,7 +17,7 @@
 <title>Pagina de Login administrativo</title>
 </head>
 <body>	
-<div id="mensagem">Mensagem que desejamos apresentar</div>
+<div id="mensagem" style="color:black;text-shadow: 0 0 1px black;">Mensagem que desejamos apresentar</div>
 
 <div id="caixa_login">
 <table style="height:100px;width:300px;top:50%;left:50%;margin-top:-50px;margin-left:-150px; position:absolute">

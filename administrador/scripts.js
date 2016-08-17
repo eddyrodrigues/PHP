@@ -3,13 +3,13 @@
 
 $(function(){
 	$('#botao').click(function(){
-		$('#mensagem').slideUp(100);
+		$('#mensagem').slideUp(10);
 	
 		
 		if( usuario == '' || senha == ''){
 			$('#mensagem').slideDown(100);
-			$('#mensagem').html("Usuário/Senha não existem");
-			$('#mensagem').slideUp(2000);
+			$('#mensagem').html("Usuário/Senha não existe");
+		
 		}else{
 			$.post("verificacao.php",{
 			usuarios:$('#usuario').val(), senhas:$('#senha').val()}
@@ -17,11 +17,11 @@ $(function(){
 				
 					if(dados == 'correto'){
 						alert('Sucesso no login');
-						window.location.replace("recebe.html");
+						window.location.replace("site.php");
 					}else{
 						$('#mensagem').slideDown(100);
-						$('#mensagem').html("Usuário/Senha não existem");
-						$('#mensagem').slideUp(2000);	
+						$('#mensagem').html("Usuário/Senha não existe");
+					
 					}
 			});
 		
@@ -29,4 +29,13 @@ $(function(){
 		
 		
 	});
+});
+
+
+$(function(){
+	$('#mensagem').mouseenter(function(){
+		$('#mensagem').slideUp(100);
+
+	});
+
 });

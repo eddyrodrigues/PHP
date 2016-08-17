@@ -37,8 +37,9 @@ class CRUD{ //C.R.U.D = [C]reate, [R]ead, [U]pdate and [D]elete
 		}
 		return $result; //retorna true(1) ou false(0)
 	}
-	public function create($table){
-		//pass
+	public function query($statement){
+		return $this->PDO->exec($statement);
+		
 	}
 	
 }
