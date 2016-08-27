@@ -54,13 +54,12 @@ table {
 
 
 .barra_esquerda {
-	margin: 0px;
-	padding: 0px;
-	float: left;
+	
+	
 	height: 100%;
 	border: 1px solid;
-	width: 20%;
-	margin-left: 5%;
+	width: 800px;
+	
 	background-color: #1C1C1C;
 }
 .barra_esquerda a{
@@ -91,6 +90,7 @@ table {
 
 
 }
+
 .barra_direita p {
 	font-size: 12px;
 	color: #FFF;
@@ -135,14 +135,25 @@ table {
 
 
 .barra_direita {
-	margin: 0px;
-	padding: 0px;
-	font-family: Arial;
-	width: 70%;
+	width:800px;
+	margin-left:-400px;
+	alignment-adjust:central;
+	left:50%;
+	position:absolute;
+	background-color:#333;	
+	min-height:600;
+	
+}
+
+
+.corpo_de_fundo {
+	left:50%;
+	width: 10px;
 	background-color: #1C1C1C;
 	border: 1px solid black;
-	float: left;
-	height: 100%;
+	
+	height: auto;
+	
 }
 
 .barra_direita th{
@@ -180,39 +191,48 @@ table {
 }
 
 
-#menu {
-	background-color : #696969;
+.menu {
+	background-color : #999;
 	text-align:  center;
 	color: black;
-	word-spacing:10px;
-	list-style-position:outside;
+	word-spacing:2px;
+	list-style-position:inline-block;
 	border-bottom: 1px solid  #696969;
+	height:30px;
 
 }
 
-#menu li{
+.menu ul li ul {
+	display: none;
+	color:#999;
+	background-color:#CCC;
+	position:absolute;	
+}
+
+
+.menu ul li {
 	display:inline;	
+	text-align:center;
 }
 
-#menu li ul{
 
-	background-color:#666;
-	color: #333;
-}
-#menu  a {
+.menu  a {
 	font-family: monospace;
-	font-size: larger;
+	font-size: 16px;
 	color: black;
 	text-decoration: none;
-	line-height: 20px;
 	text-shadow: 0;
+	height:100%;
+	padding:8px;
+
 
 }
 
-#menu  a:hover {
-	color: black;
-	padding-top: 20%;
-	line-height: 20px;
+.menu  a:hover {
+	padding:8px;
+	background-position:center;	
+	color: white;
   	text-shadow: 0px 0px 2px black;
 	transition: ease-in-out 0.2s;
+	background-color:#999;
 }

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 #verificacao de usuario e senha
 
 $usuario = $_POST['usuarios'];
@@ -9,7 +10,7 @@ $senha = $_POST['senhas'];
 
 include('crud.php');
 
-$crud = new CRUD('dudu');
+$crud = new CRUD('eduardo_web');
 
 $selected = $crud->query("SELECT FROM logins WHERE usuario = '$usuario' and senha='$senha'");
 /*

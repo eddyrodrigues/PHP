@@ -1,0 +1,14 @@
+<?php
+
+
+$db = 'eduardo_web';
+$t_noticias = 'noticias';
+$t_pessoas = 'pessoas';
+$t_vendas = 'vendas';
+
+
+
+
+
+
+?>

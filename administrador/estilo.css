@@ -98,7 +98,6 @@ table {
 #noticia_titulo {
 	text-align: center;
 	font-family: monospace;
-
 	font-size: 14px;
 	color: black;
 	text-shadow: 0 0 1px black;
@@ -131,6 +130,7 @@ table {
 	background-image: url("imagens/corpo_not.png");
 	background-position: center;
 	background-repeat: repeat-y;
+	text-align:justify;
 }
 
 #noticia_content p{
@@ -145,6 +145,7 @@ table {
 	color: black;
 	text-decoration: none;
 }*/
+
 .menu a, a:visited {
 
     color: white;
@@ -155,15 +156,17 @@ table {
 }
 
 .menu a:hover{
- 	color: white;
- 	text-shadow: 0 0 2px white;
+ 	color: #090;
+ 	text-shadow: 0 0 2px #090;
     text-align: center;
     text-decoration: none;
     display: inline;
 }
+
 .menu ul{
 	text-align: center;
 }
+
 .menu ul li{
 	display: inline;
 }
@@ -179,5 +182,66 @@ table {
 	left:50%;
 	margin-left: -400px;
 	position: absolute;
+	
+	
+	
+	/* parte do texto */
 
 }
+
+.cabecalho h2 {
+	text-align:right;
+	margin-right: 20px;	
+	font-size:27px;
+	font-family: monospace;
+	font-weight:bold;
+	color: white;
+}
+
+/* Configuração do painel de noticias */
+
+#menu_noticias_page_noticias a:link{
+	color:#000;
+	text-decoration:none;
+}
+
+#menu_noticias_page_noticias a:visited{
+	color: white;
+	text-decoration:none;
+}
+
+#menu_noticias_page_noticias a:hover{
+ 	color: #090;
+ 	text-shadow: 0 0 2px #090;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+}
+
+/*
+*	O do porque eu não peguei o mesmo estilo do menu principal que fica fixo é porque
+*	Aquele ele usa a posicao fixa, ou seja, fica correndo o site inteiro de cima para baixo
+*	Já esse apenas fica dentro da parte de noticia paradinho no topo
+*/
+#menu_noticias_page_noticias{
+	background-image: url("fundo_barra_menu_no_press.png");
+	background-repeat: repeat-x;
+	box-shadow: 0 0 4px #003333;
+	height:40px;
+	margin:0px;
+	width:100%;	
+}
+
+#menu_noticias_page_noticias ul li {
+	display:inline;
+	text-align:center;
+	
+}
+#menu_noticias_page_noticias ul{
+	text-align:center;
+	letter-spacing:0;
+}
+
+
+
+

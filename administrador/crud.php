@@ -22,7 +22,8 @@ class CRUD{ //C.R.U.D = [C]reate, [R]ead, [U]pdate and [D]elete
 			$selected->execute();
 			return $selected->fetchAll(PDO::FETCH_ASSOC); //retorna um array do tipo [coluna] => [valor da coluna]
 		}else{
-			$selected = $this->PDO->prepare('select nome, cidade from '. $table. ' where id = '. $id); //selectiona o id
+			$query = "select * from '$table' where id = '$id'";
+			$selected = $this->PDO->prepare($query); //selectiona o id
 			$selected->execute();
 			return $selected->fetchAll(PDO::FETCH_ASSOC);//retorna um array do tipo [coluna] => [valor da coluna]
 		}
@@ -41,6 +42,15 @@ class CRUD{ //C.R.U.D = [C]reate, [R]ead, [U]pdate and [D]elete
 		return $this->PDO->exec($statement);
 		
 	}
+	# vou apenas deixar essa crud exclusiva para meu sistema de noticias em outro momento atualizo e coloco um sistema legal
+	# fazendo que eu posso editar varias colunas, ou fazer algo bem generico, simplificando, para editar(update) nas row(linhas)
+#	public function update($id, $noticia){
+#		$query = "UPDATE noticias SET texto_noticia='". $noticia. "' WHERE id= '". $id. "'";	
+#		$this->PDO->query("update noticias SET texto_noticia='". $noticia . "' where id='". $id );
+#		
+#	}
+	
+	
 	
 }
 

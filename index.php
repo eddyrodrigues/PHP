@@ -4,17 +4,18 @@
 <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
 
 <script src="Jquery.js"></script>
-<script src="jas.js">$('.menu').click(function(){alert('asjdiajsd');});</script>
+<script src="jas.js"></script>
+
 </head>
 <body>
 <!-- <script>window.alert("Seja bem vindo!")</script> -->
 <?php
-if(isset($_REQUEST['id'])){
-		$id = $_REQUEST['id']; // Aqui esta difinido o request //
+if(isset($_REQUEST['page'])){
+		$id = $_REQUEST['page']; // Aqui esta difinido o request //
 		if($id != "") {
 			switch($id) {
 				// aqui a case//
-				case "serverinfo":
+				case "sobre":
 					$pagina = "serverinfo.php";
 					break;
 				case "index":
@@ -49,47 +50,15 @@ if(isset($_REQUEST['id'])){
 <span class="topo"></span>
   <p>sistema central</p>
 </div>
-
-	<ul id="menu">
-		<li> <a href="#" onMouseOver="abremenu()">Home</a> 
-        	<ul>
-        		<li>novo</li>
-            	<li>novo2</li>
-        	</ul>
-        </li>
-		<li> <a href="#" onMouseOver="abremenu()">about</a> 
-        	<ul>
-        		<li>novo</li>
-            	<li>novo2</li>
-            </ul>
-        </li>
-        	
-		<li><a href="#">ServerInfo</a></li>
+<div class='menu'>
+	<ul>
+		<li><a href="?page=" >Home</a></li>
+        <li><a href="?page=sobre" >Sobre</a></li>
+        <li><a href="?page=" >Entregues</a></li>
+        <li><a href="?page=" >Fale Conosco</a></li>
 	</ul>
-
-<div class="corpo_de_fundo">
-	<div class="barra_esquerda">
-		<table>
-			<tr>
-				<th><h1>Menu Principal</h1></th>
-			<tr>
-			</tr>
-				<td>
-					<ul>
-						<li> <a href="index.php">home</a> </li>
-						<li> <a href="#dudu">Rank</a> </li>
-						<li> <a href="?id=serverinfo">ServerInfo</a></li>
-
-						
-						<li><button type="button" onClick="bt_hid()">Desconder tudo a direita ></</button></li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<th style = "border:1px solid;"><h1></h1></th>
-			</tr>
-		</table>
-	</div>
+</div>
+<!--<div class="corpo_de_fundo">-->
 	<div class="barra_direita"  id="barra_direita_texto">
 	<?php
 		if( (isset($pagina)) and (file_exists($pagina)) ) {  //a aqui se a pagina nao existir //
@@ -99,8 +68,7 @@ if(isset($_REQUEST['id'])){
 		}
 	?>
 	</div>
-</div>
-<footer class="menu"><a name="administracao" href="?id=admin">administrador</a><p><h1 id="dudu">nome</h1></footer>
+<!--</div>-->
 
 </body>
 </html>

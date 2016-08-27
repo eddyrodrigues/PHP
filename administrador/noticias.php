@@ -6,26 +6,19 @@
 			<tr>
 				<td><table>
 						<?php
-						/* Connect to a MySQL database using driver invocation */
-						$dsn = 'mysql:dbname=noticiais;host=127.0.0.1';
-						$user = 'root';
-						$password = '';
-
-						try {
-						    $dbh = new PDO($dsn, $user, $password);
-						} catch (PDOException $e) {
-						    echo 'Connection failed: ' . $e->getMessage();
-						}
-
-						$query = "select titulo,autor,notice from noticias";
+						include ('crud.php');
+						$crud = new CRUD('eduardo_web');
+						#$crud->s("select titulo, texto_noticia, visivel, autor from noticias");
+						$result = $crud->select('noticias');
 						
-						foreach ($dbh->query($query) as $row) {
-							echo "<tr ><th id='noticia_titulo'><h1 onClick='' >".$row["titulo"]."</h1></th></tr>";
-							
-							echo "<tr  id = 'noticia_content' ><td><p >". $row["notice"] . "</p></td></tr>";
-							echo "<tr><td><div id='noticia_baixo'></div></td></tr>";
+						foreach ($result as $row) {
+							if($row['visivel'] and strlen($row['texto_noticia']) > 50){
+								echo "<tr ><th id='noticia_titulo'><h1>".$row["titulo"]."</h1></th></tr>";
+								echo "<tr  id = 'noticia_content' ><td><p >". $row["texto_noticia"] . "</p></td></tr>";
+								echo "<tr><td><div id='noticia_baixo'></div></td></tr>";
+							}
 						}
-						if($dbh->query($query) == false) {
+						if($result == false) {
 						echo "<tr><td><p> Sem noticias !</p></td></tr>";
 						}
 ?>
