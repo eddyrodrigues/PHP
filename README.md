@@ -12,5 +12,7 @@ Faltaria então a de editar, remover(excluir). Que usando como base esses códig
 
 
 <h3>Para ver o website: <link>http://computerbits.esy.es/</link></h3>
+Links para uso de conhecimento para aperfeiçar os conhecimentos:
+https://www.youtube.com/watch?v=UbJLOn1PAKw
 
 
